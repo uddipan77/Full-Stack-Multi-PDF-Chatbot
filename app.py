@@ -49,7 +49,8 @@ def get_conversation_chain(vectorstore):
     llm = HuggingFaceHub(
         repo_id="google/flan-t5-xxl", 
         model_kwargs={"temperature":0.5, "max_length":512},
-        huggingfacehub_api_token=hf_token  # Explicitly pass the token
+        huggingfacehub_api_token=hf_token,
+        task="text2text-generation"  # Explicitly pass the token
     )
 
     memory = ConversationBufferMemory(
