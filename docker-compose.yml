@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  pdf-chatbot:
+    image: uddipanbb10/pdf-qa-chatbot:latest
+    ports:
+      - "8501:8501"
+    environment:
+      - HUGGINGFACE_API_TOKEN=${HUGGINGFACE_API_TOKEN}
+    container_name: pdf-chatbot
